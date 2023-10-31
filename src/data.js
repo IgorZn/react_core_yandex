@@ -14,7 +14,13 @@ export const filmDetails = {
             id: "cdslcd21321mds",
             author: "SP",
             text: "Самый лучший мультфильм",
-            raiting: "10"
-        }
+            rating: 10
+        },
+        {
+            id: "csdlmcldksmclsdk",
+            author: "BO",
+            text: "Самый худший мультфильм",
+            rating: 3
+        },
     ]
 }

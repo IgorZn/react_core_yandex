@@ -12,20 +12,32 @@ export const App = () => {
 }
 */
 
-import { filmDetails } from "./data";
+import {filmDetails} from "./data";
 import {FilmDetails} from "./components/FilmDetails";
+import {useMemo} from "react";
+import {Reviews} from "./components/Reviews";
 
 export const App = ({name}) => {
-  return (
-      <div>
-          <header />
-          <FilmDetails
-              title={filmDetails.title}
-              seasonCount={filmDetails.seasonsCount}
-              genre={filmDetails.genre} />
-          {/*<Reviews />*/}
-          {/*<Recommendations />*/}
-          <footer />
-      </div>
-  )
+
+    const filmRating = useMemo(() => {
+        Math.floor(
+            filmDetails.reviews.reduce((sum, reviews) => {
+                return sum + reviews.rating
+            }, 0) / filmDetails.reviews.length
+        )
+    },[filmDetails.reviews])
+
+
+    return (
+        <div>
+            <header/>
+            <FilmDetails
+                title={filmDetails.title}
+                seasonCount={filmDetails.seasonsCount}
+                genre={filmDetails.genre}/>
+            <Reviews reviews={filmDetails.reviews}/>
+            {/*<Recommendations />*/}
+            <footer/>
+        </div>
+    )
 }
