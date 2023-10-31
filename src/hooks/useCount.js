@@ -10,17 +10,18 @@ export const useCount = (initValue) => {
     /*
     * Зависимость от [count], используем 'useCallback' чтобы создать
     * постоянные ссылки на decrement и increment
+    * 'useCallback', чтобы при каждом рендере не создавать функции
     * */
     // const decrement = () => useCallback(
     //     () => {setCount(count - 1)},
     //     [count]
     // )
 
-    const decrement = () => useCallback(
+    const decrement = useCallback(
         () => {setCount((currentCount) => currentCount - 1)},
         []
     )
-    const increment = () => useCallback(
+    const increment = useCallback(
         () => {setCount((currentCount) => currentCount + 1)},
         []
     )
