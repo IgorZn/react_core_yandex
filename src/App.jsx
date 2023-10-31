@@ -36,6 +36,7 @@ export const App = ({name}) => {
                 seasonCount={filmDetails.seasonsCount}
                 genre={filmDetails.genre}/>
             <Reviews reviews={filmDetails.reviews}/>
+            <p>{filmRating}</p>
             {/*<Recommendations />*/}
             <footer/>
         </div>
