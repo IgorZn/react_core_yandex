@@ -20,12 +20,12 @@ import {Reviews} from "./components/Reviews";
 export const App = ({name}) => {
 
     const filmRating = useMemo(() => {
-        Math.floor(
-            filmDetails.reviews.reduce((sum, reviews) => {
-                return sum + reviews.rating
+        return Math.floor(
+            filmDetails.reviews.reduce((sum, review) => {
+                return sum + review.rating
             }, 0) / filmDetails.reviews.length
         )
-    },[filmDetails.reviews])
+    }, [filmDetails.reviews])
 
 
     return (
