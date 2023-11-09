@@ -1,3 +1,5 @@
+[React (базовый)](https://www.youtube.com/watch?v=bnzcSC8AmHY&list=PLKaafC45L_SQqca7_ClyPWTl-EXnEt0lB&index=15&t=6507s&ab_channel=YandexforFrontend)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
